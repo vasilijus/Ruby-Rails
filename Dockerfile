@@ -6,7 +6,7 @@ RUN apt-get update -yqq \
         && rm -rf /var/lib/apt/lists
 
 WORKDIR /usr/src/app
-COPY Gemfile*
+COPY Gemfile* ./
 RUN bundle install
 COPY . .
 
